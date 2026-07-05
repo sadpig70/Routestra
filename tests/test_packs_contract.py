@@ -97,11 +97,12 @@ class TestRunStage(unittest.TestCase):
 
 
 class TestRegistry(unittest.TestCase):
-    def test_empty_package_loads_cleanly(self):
-        reg = load_packs()  # no pack modules yet (Phase 3) — contract only
-        self.assertEqual(reg["packs"], {})
+    def test_package_loads_cleanly(self):
+        reg = load_packs()  # real packs exist from Phase 3; contract must load them cleanly
         self.assertEqual(reg["errors"], [])
         self.assertEqual(reg["dropped"], [])
+        for p in reg["packs"].values():
+            self.assertTrue(p["stages"] and "fns" in p)
 
     def test_get_pack_unknown_raises(self):
         with self.assertRaises(KeyError):

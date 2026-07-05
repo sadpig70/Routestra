@@ -331,7 +331,7 @@
     },
     "ComputePowerPack": {
       "node": "ComputePowerPack",
-      "status": "designing",
+      "status": "done",
       "file": ".pgf/DESIGN-RoutestraPacks.md",
       "line": 14,
       "depth": 2,
@@ -348,7 +348,7 @@
     },
     "PowerRoamPack": {
       "node": "PowerRoamPack",
-      "status": "designing",
+      "status": "done",
       "file": ".pgf/DESIGN-RoutestraPacks.md",
       "line": 15,
       "depth": 2,
@@ -363,7 +363,7 @@
     },
     "InferenceGridPack": {
       "node": "InferenceGridPack",
-      "status": "designing",
+      "status": "done",
       "file": ".pgf/DESIGN-RoutestraPacks.md",
       "line": 16,
       "depth": 2,
@@ -378,7 +378,7 @@
     },
     "WattFabricPack": {
       "node": "WattFabricPack",
-      "status": "designing",
+      "status": "done",
       "file": ".pgf/DESIGN-RoutestraPacks.md",
       "line": 17,
       "depth": 2,
@@ -393,7 +393,7 @@
     },
     "SoilCarbonPack": {
       "node": "SoilCarbonPack",
-      "status": "designing",
+      "status": "done",
       "file": ".pgf/DESIGN-RoutestraPacks.md",
       "line": 18,
       "depth": 2,
@@ -408,7 +408,7 @@
     },
     "ThermalCascadePack": {
       "node": "ThermalCascadePack",
-      "status": "designing",
+      "status": "done",
       "file": ".pgf/DESIGN-RoutestraPacks.md",
       "line": 19,
       "depth": 2,
@@ -425,7 +425,7 @@
     },
     "ThermalPlumePack": {
       "node": "ThermalPlumePack",
-      "status": "designing",
+      "status": "done",
       "file": ".pgf/DESIGN-RoutestraPacks.md",
       "line": 20,
       "depth": 2,
@@ -440,7 +440,7 @@
     },
     "WasteStackPack": {
       "node": "WasteStackPack",
-      "status": "designing",
+      "status": "done",
       "file": ".pgf/DESIGN-RoutestraPacks.md",
       "line": 21,
       "depth": 2,
@@ -455,7 +455,7 @@
     },
     "SeasonBatteryPack": {
       "node": "SeasonBatteryPack",
-      "status": "designing",
+      "status": "done",
       "file": ".pgf/DESIGN-RoutestraPacks.md",
       "line": 22,
       "depth": 2,
@@ -470,7 +470,7 @@
     },
     "ClimateResiliencePack": {
       "node": "ClimateResiliencePack",
-      "status": "designing",
+      "status": "done",
       "file": ".pgf/DESIGN-RoutestraPacks.md",
       "line": 23,
       "depth": 2,
@@ -572,9 +572,9 @@
   },
   "summary": {
     "total": 32,
-    "done": 15,
+    "done": 25,
     "in-progress": 1,
-    "designing": 15,
+    "designing": 5,
     "decomposed": 1,
     "blocked": 0
   },
