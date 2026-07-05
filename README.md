@@ -1,3 +1,5 @@
+![Routestra](assets/Routestra_hero.jpg)
+
 # Routestra
 
 > **다차원 물리 제약 하에서 자원(컴퓨트·전력·열·자금)을 최적 위치로 라우팅/배치하는 결정론 플랫폼.**
