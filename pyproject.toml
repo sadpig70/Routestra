@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "routestra"
+version = "0.1.0"
+description = "Deterministic resource-routing platform — one kernel + N domain packs (-stra family: attest/clear/route)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Jung Wook Yang", email = "sadpig70@gmail.com"}]
+dependencies = []
+
+[tool.setuptools]
+packages = ["routestra_core", "routestra_packs"]

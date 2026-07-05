@@ -1,24 +1,33 @@
 {
   "project": "Routestra",
   "version": "0.1",
-  "phase": "design",
+  "phase": "execute",
   "workplan": ".pgf/WORKPLAN-Routestra.md",
   "design": ".pgf/DESIGN-Routestra.md",
-  "decomposed_designs": [".pgf/DESIGN-RoutestraPacks.md"],
+  "decomposed_designs": [
+    ".pgf/DESIGN-RoutestraPacks.md"
+  ],
   "pgxf_index": ".pgxf/INDEX-Routestra.json",
-  "summary": {"total": 32, "done": 0, "in-progress": 0, "designing": 31, "decomposed": 1, "blocked": 0},
+  "summary": {
+    "total": 32,
+    "done": 10,
+    "in-progress": 1,
+    "designing": 20,
+    "decomposed": 1,
+    "blocked": 0
+  },
   "nodes": {
-    "Routestra": "designing",
-    "RoutestraCore": "designing",
-    "RoutestraCore.Candidate": "designing",
-    "RoutestraCore.Score": "designing",
-    "RoutestraCore.Route": "designing",
-    "RoutestraCore.Bound": "designing",
-    "RoutestraCore.Verdict": "designing",
-    "RoutestraCore.Provenance": "designing",
-    "RoutestraCore.Ledger": "designing",
-    "RoutestraCore.Fingerprint": "designing",
-    "RoutestraCore.Determinism": "designing",
+    "Routestra": "in-progress",
+    "RoutestraCore": "done",
+    "RoutestraCore.Candidate": "done",
+    "RoutestraCore.Score": "done",
+    "RoutestraCore.Route": "done",
+    "RoutestraCore.Bound": "done",
+    "RoutestraCore.Verdict": "done",
+    "RoutestraCore.Provenance": "done",
+    "RoutestraCore.Ledger": "done",
+    "RoutestraCore.Fingerprint": "done",
+    "RoutestraCore.Determinism": "done",
     "PackContract": "designing",
     "PackContract.PackManifest": "designing",
     "PackContract.PackAPI": "designing",
@@ -46,9 +55,20 @@
     "lineage": "HELIX (resource-routing cluster) -> Routestra (deterministic resource-routing/siting platform). Independent git repo under D:/HELIX/Routestra.",
     "family": "-stra platform family: Attestra(attest) + Clearstra(clear) + Routestra(route). Shared severity algebra (valid/thin/breach == compliant/restricted/violation).",
     "thesis": "One deterministic routing kernel (score -> route -> bound -> verify + routing ledger) + N domain packs. Each HELIX routing project projects via score/bounds.",
-    "grounded_in_real_code": ["SkyGrid.evaluate_power_availability/plan_compute_roaming/verify_provenance (score/route/verify)", "ThermalCascadeBound.evaluate_site (bound severity merge)"],
+    "grounded_in_real_code": [
+      "SkyGrid.evaluate_power_availability/plan_compute_roaming/verify_provenance (score/route/verify)",
+      "ThermalCascadeBound.evaluate_site (bound severity merge)"
+    ],
     "first_wave_packs": 10,
     "reference_pack": "ComputePowerPack (SkyGrid parity for score/route/verify); ThermalCascadePack (ThermalCascadeBound parity for bound)"
   },
-  "next": "plan complete -> execute Phase 1 (RoutestraCore kernel, stdlib-only). Reference D:/HELIX/SkyGrid + D:/HELIX/ThermalCascadeBound for parity."
+  "next": "Phase 2 (PackContract: manifest/API/loader/registry)",
+  "verify": {
+    "phase1_kernel": "routestra_core: candidate/score/route/bound/verdict/provenance/ledger/fingerprint/determinism",
+    "unittests": "Ran 19 tests OK",
+    "determinism": "clean=True, 11 files (math allowed; 0 clock/network/random)",
+    "skygrid_parity": "SKYGRID PARITY OK — route() selects locB score=90.0, identical to real SkyGrid.plan_compute_roaming",
+    "bound_parity": "bound() severity merge {compliant:0,restricted:1,violation:2} matches ThermalCascadeBound.evaluate_site",
+    "verdict_aligned": "to_attestra_verdict maps compliant/restricted/violation -> valid/thin/breach (-stra family algebra)"
+  }
 }
