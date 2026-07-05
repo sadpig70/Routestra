@@ -62,7 +62,7 @@
     "first_wave_packs": 10,
     "reference_pack": "ComputePowerPack (SkyGrid parity for score/route/verify); ThermalCascadePack (ThermalCascadeBound parity for bound)"
   },
-  "next": "Routestra v0.1 implementation complete. Remaining: publish github.com/sadpig70/Routestra (user-gated).",
+  "next": "v0.1.0 released; -stra family complete (Attestra + Clearstra + Routestra).",
   "verify": {
     "phase1_kernel": "routestra_core: candidate/score/route/bound/verdict/provenance/ledger/fingerprint/determinism",
     "unittests": "Ran 19 tests OK",
@@ -83,5 +83,6 @@
       "quality": "score/route/bound/provenance/ledger defined once in routestra_core; packs contribute formulas only (zero kernel duplication); candidate_schema enforced",
       "architecture": "federate preserved (each pack tagged source_project github.com/sadpig70/*); kernel has zero pack imports; -stra family severity alignment with Attestra"
     }
-  }
+  },
+  "published": "https://github.com/sadpig70/Routestra (PUBLIC, main, tag v0.1.0) — 2026-07-05"
 }
