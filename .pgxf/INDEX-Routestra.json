@@ -209,7 +209,7 @@
     },
     "PackContract": {
       "node": "PackContract",
-      "status": "designing",
+      "status": "done",
       "file": ".pgf/DESIGN-Routestra.md",
       "line": 63,
       "depth": 1,
@@ -231,7 +231,7 @@
     },
     "PackManifest": {
       "node": "PackManifest",
-      "status": "designing",
+      "status": "done",
       "file": ".pgf/DESIGN-Routestra.md",
       "line": 64,
       "depth": 2,
@@ -248,7 +248,7 @@
     },
     "PackAPI": {
       "node": "PackAPI",
-      "status": "designing",
+      "status": "done",
       "file": ".pgf/DESIGN-Routestra.md",
       "line": 65,
       "depth": 2,
@@ -267,7 +267,7 @@
     },
     "PackLoader": {
       "node": "PackLoader",
-      "status": "designing",
+      "status": "done",
       "file": ".pgf/DESIGN-Routestra.md",
       "line": 66,
       "depth": 2,
@@ -286,7 +286,7 @@
     },
     "PackRegistry": {
       "node": "PackRegistry",
-      "status": "designing",
+      "status": "done",
       "file": ".pgf/DESIGN-Routestra.md",
       "line": 67,
       "depth": 2,
@@ -572,9 +572,9 @@
   },
   "summary": {
     "total": 32,
-    "done": 10,
+    "done": 15,
     "in-progress": 1,
-    "designing": 20,
+    "designing": 15,
     "decomposed": 1,
     "blocked": 0
   },

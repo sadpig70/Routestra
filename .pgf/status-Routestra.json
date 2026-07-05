@@ -10,9 +10,9 @@
   "pgxf_index": ".pgxf/INDEX-Routestra.json",
   "summary": {
     "total": 32,
-    "done": 10,
+    "done": 15,
     "in-progress": 1,
-    "designing": 20,
+    "designing": 15,
     "decomposed": 1,
     "blocked": 0
   },
@@ -28,11 +28,11 @@
     "RoutestraCore.Ledger": "done",
     "RoutestraCore.Fingerprint": "done",
     "RoutestraCore.Determinism": "done",
-    "PackContract": "designing",
-    "PackContract.PackManifest": "designing",
-    "PackContract.PackAPI": "designing",
-    "PackContract.PackLoader": "designing",
-    "PackContract.PackRegistry": "designing",
+    "PackContract": "done",
+    "PackContract.PackManifest": "done",
+    "PackContract.PackAPI": "done",
+    "PackContract.PackLoader": "done",
+    "PackContract.PackRegistry": "done",
     "Packs": "decomposed",
     "RoutestraPacks.ComputePowerPack": "designing",
     "RoutestraPacks.PowerRoamPack": "designing",
@@ -62,13 +62,14 @@
     "first_wave_packs": 10,
     "reference_pack": "ComputePowerPack (SkyGrid parity for score/route/verify); ThermalCascadePack (ThermalCascadeBound parity for bound)"
   },
-  "next": "Phase 2 (PackContract: manifest/API/loader/registry)",
+  "next": "Phase 3 (packs): ComputePowerPack (SkyGrid parity) + ThermalCascadePack (ThermalCascadeBound parity) + 8 more",
   "verify": {
     "phase1_kernel": "routestra_core: candidate/score/route/bound/verdict/provenance/ledger/fingerprint/determinism",
     "unittests": "Ran 19 tests OK",
     "determinism": "clean=True, 11 files (math allowed; 0 clock/network/random)",
     "skygrid_parity": "SKYGRID PARITY OK — route() selects locB score=90.0, identical to real SkyGrid.plan_compute_roaming",
     "bound_parity": "bound() severity merge {compliant:0,restricted:1,violation:2} matches ThermalCascadeBound.evaluate_site",
-    "verdict_aligned": "to_attestra_verdict maps compliant/restricted/violation -> valid/thin/breach (-stra family algebra)"
+    "verdict_aligned": "to_attestra_verdict maps compliant/restricted/violation -> valid/thin/breach (-stra family algebra)",
+    "phase2_pack_contract": "routestra_packs/{_base,loader}: MANIFEST validation (name/version/stages/candidate_schema/source_project), stage->fn map (route->score, bound->bounds), fingerprint dedup, run_stage dispatches both stages through kernel (route uses kernel route(); bound uses kernel bound()). 28 unittests OK (synthetic route+bound pack); zero kernel change; determinism clean (13 files)."
   }
 }
