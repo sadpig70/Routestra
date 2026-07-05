@@ -1,7 +1,7 @@
 {
   "project": "Routestra",
   "version": "0.1",
-  "phase": "execute",
+  "phase": "verify",
   "workplan": ".pgf/WORKPLAN-Routestra.md",
   "design": ".pgf/DESIGN-Routestra.md",
   "decomposed_designs": [
@@ -10,14 +10,14 @@
   "pgxf_index": ".pgxf/INDEX-Routestra.json",
   "summary": {
     "total": 32,
-    "done": 29,
-    "in-progress": 1,
-    "designing": 1,
+    "done": 31,
+    "in-progress": 0,
+    "designing": 0,
     "decomposed": 1,
     "blocked": 0
   },
   "nodes": {
-    "Routestra": "in-progress",
+    "Routestra": "done",
     "RoutestraCore": "done",
     "RoutestraCore.Candidate": "done",
     "RoutestraCore.Score": "done",
@@ -48,7 +48,7 @@
     "CLI": "done",
     "Schemas": "done",
     "Docs": "done",
-    "Tests": "designing"
+    "Tests": "done"
   },
   "determinism_boundary": "core+pack-formulas = pure stdlib (now injected); hash excludes now/*_at meta; domain feeds (satellite/price/forecast) = meta-layer outside Routestra boundary (produces the candidate/telemetry)",
   "design_notes": {
@@ -62,7 +62,7 @@
     "first_wave_packs": 10,
     "reference_pack": "ComputePowerPack (SkyGrid parity for score/route/verify); ThermalCascadePack (ThermalCascadeBound parity for bound)"
   },
-  "next": "Phase 5 (Tests consolidation + final 3-perspective VERIFY)",
+  "next": "Routestra v0.1 implementation complete. Remaining: publish github.com/sadpig70/Routestra (user-gated).",
   "verify": {
     "phase1_kernel": "routestra_core: candidate/score/route/bound/verdict/provenance/ledger/fingerprint/determinism",
     "unittests": "Ran 19 tests OK",
@@ -72,6 +72,16 @@
     "verdict_aligned": "to_attestra_verdict maps compliant/restricted/violation -> valid/thin/breach (-stra family algebra)",
     "phase2_pack_contract": "routestra_packs/{_base,loader}: MANIFEST validation (name/version/stages/candidate_schema/source_project), stage->fn map (route->score, bound->bounds), fingerprint dedup, run_stage dispatches both stages through kernel (route uses kernel route(); bound uses kernel bound()). 28 unittests OK (synthetic route+bound pack); zero kernel change; determinism clean (13 files).",
     "phase3_packs": "10 packs loaded (0 dropped, 0 errors), zero kernel change. SKYGRID PARITY OK: compute-power route selects wind-farm-2/90.0 == real SkyGrid.plan_compute_roaming. ThermalCascade bound: compliant sample + violation merge (worst=power). watt-fabric sovereignty gate, soil-carbon verifiable gate. 38 unittests OK; determinism clean (23 files).",
-    "phase4_interface": "routestra_run.py (RouteRun score->route->bound->verify->ledger); 14 schemas (10 candidate + 4 kernel); loader enforces candidate_schema existence (0 errors); cli.py (pack/run/stage/verify/determinism); docs/{ARCHITECTURE,PACK-CONTRACT,DETERMINISM}.md. 45 unittests OK; determinism clean (23 files). CLI run compute-power -> selected wind-farm-2, provenance valid, 2 ledger records, chain valid."
+    "phase4_interface": "routestra_run.py (RouteRun score->route->bound->verify->ledger); 14 schemas (10 candidate + 4 kernel); loader enforces candidate_schema existence (0 errors); cli.py (pack/run/stage/verify/determinism); docs/{ARCHITECTURE,PACK-CONTRACT,DETERMINISM}.md. 45 unittests OK; determinism clean (23 files). CLI run compute-power -> selected wind-farm-2, provenance valid, 2 ledger records, chain valid.",
+    "phase5_final": {
+      "unittests": "python -W error::ResourceWarning -m unittest discover -s tests: Ran 45 OK (warning-clean)",
+      "determinism": "clean=True, 23 files",
+      "registry": "10 packs, 0 dropped, 0 errors",
+      "skygrid_parity": "True (compute-power route == real SkyGrid.plan_compute_roaming)",
+      "verdict_aligned": "True (compliant/restricted/violation -> valid/thin/breach)",
+      "acceptance": "SingleSourceKernel / PackContractStable / ReferencePackPorted / VerdictAligned / DeterministicCore / Federated / Tested — all met",
+      "quality": "score/route/bound/provenance/ledger defined once in routestra_core; packs contribute formulas only (zero kernel duplication); candidate_schema enforced",
+      "architecture": "federate preserved (each pack tagged source_project github.com/sadpig70/*); kernel has zero pack imports; -stra family severity alignment with Attestra"
+    }
   }
 }

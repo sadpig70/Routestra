@@ -8,7 +8,7 @@
   "nodes": {
     "Routestra": {
       "node": "Routestra",
-      "status": "in-progress",
+      "status": "done",
       "file": ".pgf/DESIGN-Routestra.md",
       "line": 52,
       "depth": 0,
@@ -553,7 +553,7 @@
     },
     "Tests": {
       "node": "Tests",
-      "status": "designing",
+      "status": "done",
       "file": ".pgf/DESIGN-Routestra.md",
       "line": 73,
       "depth": 1,
@@ -572,9 +572,9 @@
   },
   "summary": {
     "total": 32,
-    "done": 29,
-    "in-progress": 1,
-    "designing": 1,
+    "done": 31,
+    "in-progress": 0,
+    "designing": 0,
     "decomposed": 1,
     "blocked": 0
   },
