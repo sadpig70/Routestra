@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Routing pack manifest",
+  "type": "object",
+  "required": [
+    "name",
+    "version",
+    "stages",
+    "candidate_schema",
+    "source_project"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "stages": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "route",
+          "bound"
+        ]
+      },
+      "minItems": 1
+    },
+    "candidate_schema": {
+      "type": "string"
+    },
+    "source_project": {
+      "type": "string"
+    }
+  }
+}

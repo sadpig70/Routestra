@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ThermalCascade telemetry",
+  "type": "object",
+  "required": [
+    "power_alloc_mw",
+    "grid_limit_mw",
+    "thermal_discharge_c",
+    "dispersion_limit_c"
+  ],
+  "properties": {
+    "power_alloc_mw": {
+      "type": "number",
+      "minimum": 0
+    },
+    "grid_limit_mw": {
+      "type": "number",
+      "minimum": 0
+    },
+    "thermal_discharge_c": {
+      "type": "number"
+    },
+    "dispersion_limit_c": {
+      "type": "number"
+    }
+  }
+}

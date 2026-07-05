@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ThermalPlume telemetry",
+  "type": "object",
+  "required": [
+    "discharge_temp_c",
+    "temp_limit_c",
+    "plume_radius_m",
+    "dilution_window_m"
+  ],
+  "properties": {
+    "discharge_temp_c": {
+      "type": "number"
+    },
+    "temp_limit_c": {
+      "type": "number"
+    },
+    "plume_radius_m": {
+      "type": "number",
+      "minimum": 0
+    },
+    "dilution_window_m": {
+      "type": "number",
+      "minimum": 0
+    }
+  }
+}

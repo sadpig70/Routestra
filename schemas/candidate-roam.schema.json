@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PowerRoam candidate",
+  "type": "object",
+  "required": [
+    "name",
+    "power_available_mw",
+    "power_cost",
+    "comm_latency_ms"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "power_available_mw": {
+      "type": "number",
+      "minimum": 0
+    },
+    "power_cost": {
+      "type": "number",
+      "minimum": 0
+    },
+    "comm_latency_ms": {
+      "type": "number",
+      "minimum": 0
+    }
+  }
+}

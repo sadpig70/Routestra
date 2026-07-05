@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SkyGrid power candidate",
+  "type": "object",
+  "required": [
+    "name",
+    "grid_capacity_mw",
+    "renewable_pct",
+    "latency_ms"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "grid_capacity_mw": {
+      "type": "number",
+      "minimum": 0
+    },
+    "renewable_pct": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "latency_ms": {
+      "type": "number",
+      "minimum": 0
+    },
+    "confirmed_renewable": {
+      "type": "boolean"
+    },
+    "evidence_hash": {
+      "type": "string"
+    }
+  }
+}

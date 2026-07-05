@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SeasonBat telemetry",
+  "type": "object",
+  "required": [
+    "firm_draw_mw",
+    "supply_mw",
+    "cycle_depth",
+    "cycle_capacity"
+  ],
+  "properties": {
+    "firm_draw_mw": {
+      "type": "number",
+      "minimum": 0
+    },
+    "supply_mw": {
+      "type": "number",
+      "minimum": 0
+    },
+    "cycle_depth": {
+      "type": "number",
+      "minimum": 0
+    },
+    "cycle_capacity": {
+      "type": "number",
+      "minimum": 0
+    }
+  }
+}

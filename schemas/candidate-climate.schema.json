@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ClimateMesh telemetry",
+  "type": "object",
+  "required": [
+    "threat",
+    "inherent_risk",
+    "controls"
+  ],
+  "properties": {
+    "threat": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "inherent_risk": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "controls": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "residual_limit": {
+      "type": "number"
+    },
+    "control_gap": {
+      "type": "number"
+    }
+  }
+}

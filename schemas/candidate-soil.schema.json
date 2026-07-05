@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SoilBond parcel",
+  "type": "object",
+  "required": [
+    "name",
+    "soil_carbon_reduction",
+    "resilience_score"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "soil_carbon_reduction": {
+      "type": "number",
+      "minimum": 0
+    },
+    "resilience_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "verifiable_reduction": {
+      "type": "boolean"
+    }
+  }
+}

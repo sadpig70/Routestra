@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Bound verdict (bound() result)",
+  "type": "object",
+  "required": [
+    "verdict",
+    "dimensions"
+  ],
+  "properties": {
+    "verdict": {
+      "type": "string",
+      "enum": [
+        "compliant",
+        "restricted",
+        "violation"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "worst": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dimensions": {
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "title": "dimension",
+        "type": "object",
+        "required": [
+          "dimension",
+          "verdict"
+        ],
+        "properties": {
+          "dimension": {
+            "type": "string"
+          },
+          "verdict": {
+            "type": "string",
+            "enum": [
+              "compliant",
+              "restricted",
+              "violation"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

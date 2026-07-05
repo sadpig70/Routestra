@@ -8,6 +8,7 @@ in routestra_core.
 """
 
 import importlib
+import os
 import pkgutil
 
 from routestra_core.fingerprint import fingerprint_pack
@@ -15,6 +16,7 @@ from routestra_core.route import route
 from routestra_core.bound import bound
 
 _RESERVED = {"loader", "_base"}
+_REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 _REQUIRED_MANIFEST = ("name", "version", "stages", "candidate_schema", "source_project")
 STAGES = ("route", "bound")
 STAGE_FN = {"route": "score", "bound": "bounds"}
@@ -64,6 +66,10 @@ def load_packs(package="routestra_packs"):
         manifest, fns, err = validate_module(mod, mod_name)
         if err:
             registry["errors"].append(err)
+            continue
+        if not os.path.exists(os.path.join(_REPO_ROOT, manifest["candidate_schema"])):
+            registry["errors"].append(
+                f"{manifest['name']}: declared candidate_schema not found: {manifest['candidate_schema']}")
             continue
         fp = fingerprint_pack(manifest)
         if fp in seen_fp:
