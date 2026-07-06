@@ -76,6 +76,20 @@ FlowMesh의 `_decide(utilization)`가 계산된 물리 지표를 임계값으로
   hash 입력에서 `now`/`*_at` 제외 → 시간 무관 재현.
 - **도메인 피드(위성·시세·예측) = 메타층** — Routestra 경계 밖(후보/telemetry를 *생산*).
 
+## 빠른 시작
+
+```bash
+# 팩 레지스트리 (11 팩)
+python cli.py pack list
+
+# 한 스테이지 실행 (입력 생략 시 팩 샘플 사용)
+python cli.py stage --pack thermal-cascade --stage bound    # -> {"verdict": "compliant", "worst": "power", ...}
+python cli.py stage --pack compute-power --stage route      # 최적 eligible 후보 선택
+
+# 결정론 경계 검사
+python cli.py determinism                                   # -> {"clean": true, ...}
+```
+
 ## 라이선스
 
 MIT License © 2026 sadpig70 (Jung Wook Yang)
