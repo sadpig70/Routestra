@@ -52,14 +52,11 @@ Routestra/
 │   ├── WORKPLAN-Routestra.md      #   실행 계획
 │   └── status-Routestra.json
 ├── .pgxf/INDEX-Routestra.json     # PGXF 인덱스 (32 노드)
-├── routestra_core/                # ★ 커널 (stdlib only) [예정]
-│   ├── candidate · score · route · bound · verdict · provenance · ledger · fingerprint · determinism
-├── routestra_packs/               # ★ 도메인 팩 [예정]
-│   └── compute_power/ (레퍼런스) · thermal_cascade/ (bound 레퍼런스) · ...
-├── schemas/ · cli.py · tests/     # [예정]
-```
+├── routestra_core/                # ★ 커널 (stdlib only)│   ├── candidate · score · route · bound · verdict · provenance · ledger · fingerprint · determinism
+├── routestra_packs/               # ★ 도메인 팩│   └── compute_power/ (레퍼런스) · thermal_cascade/ (bound 레퍼런스) · ...
+├── schemas/ · cli.py · tests/     #```
 
-> 현재 상태: **설계 완료(design phase)**. 코드 노드는 WORKPLAN Phase 1부터 구현 예정.
+> 현재 상태: **구현·검증 완료**. 커널 + 11 도메인 팩 전부 구현, 결정론 unittest + parity + determinism boundary 통과, CI green.
 
 ## 1차 도메인 팩 (10종)
 
