@@ -11,6 +11,8 @@ SeasonBat·WattWeaveAI·SoilBond·ClimateMesh)이 도메인 공식만 바꿔 같
 왔는데, Routestra는 그 기계를 커널로 한 번만 정의하고 각 도메인을 **라우팅 팩**으로 얹는다.
 
 ## -stra 플랫폼 패밀리
+> 🔗 **생태계 데모**: [stra-demo](https://github.com/sadpig70/stra-demo) — route → clear → certify → attest가 한 결정을 함께 처리하는 end-to-end 데모.
+
 
 Routestra는 [HELIX](../README.md) 파생 **`-stra` 3형제**의 세 번째다 — 셋 다 독립 저장소로 자립 구동.
 
