@@ -1,5 +1,7 @@
 ![Routestra](assets/Routestra_hero.jpg)
 
+[![CI](https://github.com/sadpig70/Routestra/actions/workflows/ci.yml/badge.svg)](https://github.com/sadpig70/Routestra/actions/workflows/ci.yml)
+
 # Routestra
 
 > **다차원 물리 제약 하에서 자원(컴퓨트·전력·열·자금)을 최적 위치로 라우팅/배치하는 결정론 플랫폼.**
@@ -63,6 +65,12 @@ Routestra/
 
 `compute-power`(레퍼런스) · `thermal-cascade`(bound 레퍼런스) · `power-roam` · `inference-grid` ·
 `watt-fabric` · `soil-carbon` · `thermal-plume` · `waste-stack` · `season-battery` · `climate-resilience`.
+
+**추가 흡수 팩 (총 11종):** `flow-mesh` — FlowMesh(파이프라인 병목). **machine-aware routing**이
+FlowMesh의 `_decide(utilization)`가 계산된 물리 지표를 임계값으로 3단계 분류하는 threshold-bound,
+즉 Routestra `bound`(compliant/restricted/violation)와 동형임을 실코드로 확인해 여기로 라우팅했다
+(원본과 parity 테스트 동봉).
+
 각 팩은 `source_project`로 원본 저장소(github.com/sadpig70/*)를 추적한다.
 
 ## 결정론 경계
