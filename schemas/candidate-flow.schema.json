@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FlowMesh pipeline telemetry",
+  "type": "object",
+  "required": [
+    "input_rate",
+    "stages"
+  ],
+  "properties": {
+    "input_rate": {
+      "type": "number",
+      "minimum": 0
+    },
+    "unit_value": {
+      "type": "number",
+      "minimum": 0
+    },
+    "stages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "stage_id",
+          "constraint_type",
+          "capacity"
+        ],
+        "properties": {
+          "stage_id": {
+            "type": "string"
+          },
+          "constraint_type": {
+            "type": "string",
+            "enum": [
+              "compute",
+              "memory",
+              "io",
+              "network",
+              "data",
+              "human_review",
+              "license"
+            ]
+          },
+          "capacity": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}
