@@ -16,16 +16,18 @@ SeasonBat·WattWeaveAI·SoilBond·ClimateMesh)이 도메인 공식만 바꿔 같
 > 🔗 **생태계 데모**: [stra-demo](https://github.com/sadpig70/stra-demo) — route → clear → certify → attest가 한 결정을 함께 처리하는 end-to-end 데모.
 
 
-Routestra는 [HELIX](../README.md) 파생 **`-stra` 3형제**의 세 번째다 — 셋 다 독립 저장소로 자립 구동.
+Routestra는 [HELIX](../README.md) 파생 **`-stra` 5형제**의 하나다 — 다섯 다 독립 저장소로 자립 구동.
 
 | 플랫폼 | 동사 | 역할 |
 |---|---|---|
-| [Attestra](../Attestra/README.md) | **attest** | 위임 행위를 증언 (verdict/attestation) |
-| [Clearstra](../Clearstra/README.md) | **clear** | 시장을 청산 (clearing exchange) |
+| [Attestra](https://github.com/sadpig70/Attestra) | **attest** | 위임 행위를 증언 (verdict/attestation) |
+| [Clearstra](https://github.com/sadpig70/Clearstra) | **clear** | 시장을 청산 (clearing exchange) |
 | **Routestra** | **route** | 자원을 라우팅 (resource routing/siting) |
+| [Certstra](https://github.com/sadpig70/Certstra) | **certify** | 로봇 정책·릴리스 인증 (Condense emit) |
+| [Scorestra](https://github.com/sadpig70/Scorestra) | **score** | 가중 스코어 → 등급 분류 (Condense emit) |
 
-세 플랫폼은 **verdict severity 대수를 공유**한다: `valid < thin < breach`(Attestra) ≅
-`compliant < restricted < violation`(Routestra bound). Routestra의 라우팅 판정을 Attestra가 증언하는
+이 플랫폼들은 **verdict severity 대수를 공유**한다: `valid < thin < breach`(Attestra) ≅
+`compliant < restricted < violation`(Routestra bound) ≅ `certifiable < needs_review < blocked`(Certstra). Routestra의 라우팅 판정을 Attestra가 증언하는
 조합이 자연스럽다.
 
 ## 라우팅 기계 (실코드 근거)
