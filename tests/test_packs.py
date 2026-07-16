@@ -12,6 +12,7 @@ EXPECTED = {
     "compute-power", "power-roam", "inference-grid", "watt-fabric", "soil-carbon",
     "thermal-cascade", "thermal-plume", "waste-stack", "season-battery", "climate-resilience",
     "flow-mesh",   # BUILD_ON_PLATFORM: compat-mesh cluster (FlowMesh) -> Routestra bound pack
+    "contract-relay",   # BUILD_ON_PLATFORM: fail-closed handoff receipts -> Routestra route pack
 }
 
 
